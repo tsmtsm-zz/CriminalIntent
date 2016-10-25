@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'//标识这是一个应用模块
+
+android {
+    compileSdkVersion 23 //编译SDK版本
+    buildToolsVersion "23.0.3"//构建工具版本
+
+    defaultConfig {
+        applicationId "com.bignerdranch.android.criminalintent"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {//打包类型
+        release {
+            minifyEnabled false//是否混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {//依赖管理
+    compile fileTree(dir: 'libs', include: ['*.jar'])//本地依赖
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'//远程依赖
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+}
