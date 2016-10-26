@@ -29,6 +29,7 @@ public class CrimeListFragment extends Fragment{
     private CrimeAdapter mCrimeAdapter;
     private final static int REQUEST_CRIME=1;
     private static int mPostion=0;
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
