@@ -74,7 +74,7 @@ public class CrimeListFragment extends Fragment{
 
 
 
-            Intent intent =MainActivity.newIntent(getActivity(),mCrime.getUUID());
+            Intent intent =CrimePagerActivity.newIntent(getActivity(),mCrime.getUUID());
            // Intent intent = new Intent(getActivity(),mCrime.getUUID());
            // startActivity(intent);
             startActivityForResult(intent,REQUEST_CRIME);
@@ -98,6 +98,7 @@ public class CrimeListFragment extends Fragment{
         @Override
         public void onBindViewHolder(CrimeHolder holder, int position) {
             Crime crime = mCrimes.get(position);
+//            mPostion = position;
             holder.bindCrime(crime);
         }
 
