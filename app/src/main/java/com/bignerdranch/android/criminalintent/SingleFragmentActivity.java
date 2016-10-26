@@ -5,12 +5,15 @@ import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 /**
  * Created by tsm on 2016/10/23.
  */
-public abstract class SingleFragmentActivity extends FragmentActivity {
+
+//change the FragmentActivity to AppCompatActivity
+public abstract class SingleFragmentActivity extends AppCompatActivity {
     protected abstract Fragment createFragment();
     private String TAG  = "SingleFragmentActivity";
 

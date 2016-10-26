@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,8 +18,8 @@ import java.util.UUID;
 /**
  * Created by tsm on 2016/10/25.
  */
-
-public class CrimePagerActivity  extends FragmentActivity{
+//change the FragmentActivity to AppCompatActivity
+public class CrimePagerActivity  extends AppCompatActivity{
     private ViewPager mViewPager;
     private List<Crime> mCrimes;
     public final static String CRIME_ID="crime_id";
@@ -27,6 +29,8 @@ public class CrimePagerActivity  extends FragmentActivity{
         intent.putExtra(CRIME_ID,id);
         return  intent;
     }
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

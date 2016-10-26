@@ -12,6 +12,9 @@ import java.util.UUID;
 public class CrimeLab {
     private static CrimeLab sCrimeLab;
     private List<Crime>    mCrimies;
+    public void addCrime(Crime c){
+        mCrimies.add(c);
+    }
 
     public List<Crime> getCrimies() {
         return mCrimies;
@@ -47,11 +50,11 @@ public class CrimeLab {
     private CrimeLab(Context context){
 
         mCrimies = new ArrayList<>();
-        for (int i=0;i<100;i++){
-            Crime crimie = new Crime();
-            crimie.setTitle("Crime #"+i);
-            crimie.setSolved(i % 2 == 0);
-            mCrimies.add(crimie);
-        }
+//        for (int i=0;i<100;i++){
+//            Crime crimie = new Crime();
+//            crimie.setTitle("Crime #"+i);
+//            crimie.setSolved(i % 2 == 0);
+//            mCrimies.add(crimie);
+//        }
     }
 }
