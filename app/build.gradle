@@ -19,10 +19,14 @@ android {
     }
 }
 
-dependencies {//依赖管理
-    compile fileTree(dir: 'libs', include: ['*.jar'])//本地依赖
+dependencies {
+    //依赖管理
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //本地依赖
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.3.0'//远程依赖
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    //远程依赖
     compile 'com.android.support:support-v4:23.3.0'
     compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha2'
 }
